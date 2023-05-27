@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can We??</title>
+    <style>
+        .container {
+            width: 1340px;
+            height: 620px;
+            padding: auto;
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+
+        }
+
+        .heading {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center
+        }
+
+        .catimg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .yes {
+            position: absolute;
+            top: 500px;
+            left: 450px;
+
+        }
+
+        .no {
+            position: absolute;
+            top: 500px;
+            left: 800px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Can we Hang Out?</h1>
+
+        <div class="catimg">
+            <img class="img" style="width: 300px; height: 354px;" src="please.gif" alt="cat">
+        </div>
+        <button class="yes" onclick="sayyes()">Yes 💓</button>
+        <button id="no" style="position: absolute; top: 500px; left: 800px;" class="no" onmouseover="sayno()">Hell No
+            😠</button>
+    </div>
+
+
+    <script>
+        function sayyes() {
+            alert("Mujhe Pta Tha 🕵️‍♂️");
+
+        }
+
+        function sayno() {
+            var top = document.getElementById("no");
+            var topposi = top.style.top;
+            var left = top.style.left;
+            //console.log(topposi);
+
+            var min = 1;
+            var max = 200;
+            var x = Math.floor(Math.random() * (max - min + 1)) + min;
+            console.log(x)
+
+
+            var miny = 1;
+            var maxy = 1300;
+            var y = Math.floor(Math.random() * (maxy - miny + 1)) + miny;
+            console.log(y)
+
+            if (topposi == "500px") {
+
+                console.log(top.style.top = x + 'px')
+                console.log(top.style.left = x + 'px')
+            }
+            if (topposi != "500px")
+                top.style.top = '500px'
+            top.style.left = y + 'px'
+        }
+
+    </script>
+</body>
+
+</html>
